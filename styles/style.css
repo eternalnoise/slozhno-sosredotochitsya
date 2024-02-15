@@ -1,5 +1,87 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  max-inline-size: 375px;
+  margin: 0 auto;
+}
+
+.header {
+
+}
+
+.decorated-zone {
+
+}
+
+.header__theme-menu {
+
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+
+}
+
+.header__title {
+  color: #DB00FF;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+
+}
+
+.section__content {
+
+}
+
+.section__content-title {
+  color: var(--accent-color);
+
+}
+
+.section__content-list {
+  list-style-type: none;
+
+}
+
+.section__content-list-item {
+
+}
+
+.section__content-list-item-title {
+  background-color: var(--accent-color);
+  color: var(--bg-text-color);
+  font-weight: 700;
+}
+
+.section__content-list-item-title:not(:first-of-type) {
+  font-weight: 400;
+}
+
+.section__content-list-item-text {
+
+}
+
+.section__content-list-link {
+  text-decoration: none;
+  color: var(--main-text-color);
+  text-shadow: 2px 1px 0 var(--accent-color);
+
 }
