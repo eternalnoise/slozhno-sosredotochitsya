@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-size: 18px;
@@ -12,6 +13,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  padding-inline: var(--page-padding);
 }
 
 .header {
@@ -26,6 +28,7 @@
   align-items: center;
   margin-block-end: 40px;
   min-block-size: 100vh;
+  padding-block: var(--page-padding);
 }
 
 .decorated-zone {
@@ -37,8 +40,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 2px;
+  top: 10px;
+  right: 0;
   border-inline-end: 1px solid var(--accent-color);
   border-block-start: 1px solid var(--accent-color);
   inline-size: 25px;
@@ -48,7 +51,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
@@ -61,14 +64,14 @@
   display: block;
   color: var(--accent-color);
   text-transform: uppercase;
-  inset-inline-end: 31px;
-  inset-block-start: -1px;
+  inset-inline-end: 30px;
+  inset-block-start: 11px;
 }
 
 .decoration::after {
   content:'';
   position: absolute;
-  top: 8px;
+  top: 7px;
   left: 45px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
@@ -88,7 +91,6 @@
   align-items: flex-end;
   gap: 10px;
   margin-inline-end: 10px;
-  margin-block-end: 32px;
   list-style: none;
 
 }
@@ -105,7 +107,16 @@
   background: none;
   appearance: none;
   border: none;
+}
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-button-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .page__title {
@@ -124,25 +135,22 @@
 }
 
 .section__content {
-  margin-block-end: 50px;
-
+  margin-block-end: 40px;
+  display: grid;
+  gap: 20px;
 }
 
 .section__content-title {
   color: var(--accent-color);
   font-size: 18px;
-
 }
-
-ul, li {
-  padding-inline-start: 0;
-}
-
 
 .section__content-list {
   list-style-type: none;
-  
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
 }
 
 .section__content-list-item {
@@ -160,8 +168,8 @@ ul, li {
   background-color: var(--accent-color);
 }
 
-
 .section__content-list-item-text {
+  margin-block-end: 10px;
 
 }
 
@@ -169,16 +177,28 @@ ul, li {
   color: var(--main-text-color);
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color);
+}
 
+.section__content-list-link:hover {
+  border-block-end: 1px solid var(--main-text-color);
+  cursor: pointer;
+}
+
+.section__content-list-link:focus {
+  outline: 1px solid var(--main-text-color);
 }
 
 .image__section {
+  display: grid;
+  gap: 10px;
+  
   
 }
 
 .image__content-list {
   display: grid;
   gap: 10px;
+  
 }
 
 .gallery__image {
