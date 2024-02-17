@@ -1,14 +1,17 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  margin: 0 auto;
-  padding-inline: var(--page-padding);
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 1.3;
   background-color:var(--bg-color);
-  max-inline-size: 375px;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 .header {
@@ -23,11 +26,6 @@
   align-items: center;
   margin-block-end: 40px;
   min-block-size: 100vh;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .decorated-zone {
@@ -39,8 +37,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: 0;
+  right: 2px;
   border-inline-end: 1px solid var(--accent-color);
   border-block-start: 1px solid var(--accent-color);
   inline-size: 25px;
@@ -50,7 +48,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
@@ -63,8 +61,8 @@
   display: block;
   color: var(--accent-color);
   text-transform: uppercase;
-  inset-inline-end: 28px;
-  inset-block-start: 10px;
+  inset-inline-end: 31px;
+  inset-block-start: -1px;
 }
 
 .decoration::after {
@@ -81,16 +79,16 @@
 
 .header__theme-menu {
   grid-area: menu;
-  margin-block: 66.5px;
-
+  justify-self: flex-end;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 13px;
+  gap: 10px;
   margin-inline-end: 10px;
+  margin-block-end: 32px;
   list-style: none;
 
 }
@@ -106,6 +104,7 @@
   text-transform: lowercase;
   background: none;
   appearance: none;
+  border: none;
 
 }
 
@@ -116,17 +115,16 @@
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 95.7px;
 }
 
 .header__description {
   grid-area: description;
-  color: var(--bg-text-color);
   font-size: 18px;
-  background-color: var(--accent-color);
-
 }
 
 .section__content {
+  margin-block-end: 50px;
 
 }
 
@@ -139,6 +137,7 @@
 ul, li {
   padding-inline-start: 0;
 }
+
 
 .section__content-list {
   list-style-type: none;
