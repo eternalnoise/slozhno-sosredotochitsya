@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  position: relative;
+  padding-inline: var(--page-padding);
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-size: 18px;
@@ -11,8 +13,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
-  padding-inline: var(--page-padding);
 }
 
 .header {
@@ -26,8 +26,8 @@
   justify-content: center;
   align-items: center;
   margin-block-end: 40px;
-  min-block-size: 100vh;
   padding-block: var(--page-padding);
+  min-block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -35,8 +35,8 @@
   position: absolute;
   top: 10px;
   right: 0;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-text-color);
+  border-block-start: 1px solid var(--accent-text-color);
   inline-size: 25px;
   block-size: 25px;
 }
@@ -46,15 +46,15 @@
   position: absolute;
   bottom: 10px;
   left: 0;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-text-color);
+  border-block-end: 1px solid var(--accent-text-color);
   inline-size: 25px;
   block-size: 25px;
 }
 
 .decoration {
   position: absolute;
-  display: block;
+  display: var(--header-decoration-display);
   color: var(--accent-color);
   text-transform: uppercase;
   inset-inline-end: 30px;
@@ -88,13 +88,13 @@
 }
 
 .header__theme-menu-button {
+  border: 1px solid transparent;
   color: var(--accent-text-color);
   font-family: var(--main-font);
   font-size: 18px;
   text-transform: lowercase;
   background: none;
   appearance: none;
-  border: 1px solid transparent;
 }
 
 .header__theme-menu-button:hover {
@@ -117,8 +117,8 @@
   color: var(--title-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--text-shadow);
   line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--text-shadow);
 }
 
 .header__description {
@@ -143,9 +143,9 @@
 }
 
 .section__content-list {
-  list-style-type: none;
   display: grid;
   gap: 20px;
+  list-style-type: none;
 }
 
 .section__content-list-item {
@@ -155,10 +155,10 @@
 }
 
 .title-decor {
-  font-weight: 700;
   color: var(--bg-text-color);
-  background-color: var(--accent-color);
+  font-weight: 700;
   font-size: inherit;
+  background-color: var(--accent-color);
 }
 
 .section__content-list-item-title {
@@ -207,11 +207,11 @@
 .footer {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-block-size: 668px;
+  align-items: center;
   min-height: 100vh;
   margin-block-start: 40px;
+  min-block-size: 668px;
 }
 
 @media (width >= 768px) {
@@ -250,10 +250,10 @@
   }
 
   .header__description {
-    max-inline-size: 50%;
     justify-self: right;
     align-self: center;
     margin-block-end: 10px;
+    max-inline-size: 50%;
   }
 
   .section__content {
@@ -324,8 +324,8 @@
   }
 
   .header__theme-menu {
-    align-self: start;
     justify-self: center;
+    align-self: start;
     padding-block-start: 9px;
   }
 
