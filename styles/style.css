@@ -207,6 +207,7 @@
 }
 
 @media (width >= 768px) {
+
   .page {
     padding-inline: 20px;
   }
@@ -296,7 +297,6 @@
 
   .img-books {
     grid-area: 2 / 2;
-
   }
 
   .img-street {
@@ -306,6 +306,51 @@
   .footer {
     margin-block-start: 65px;
   }
+}
+
+@media (width >= 1024px) {
+
+  .header {
+    justify-content: unset;
+    max-height: 100vh;
+  }
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+    padding-block-start: 9px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 25px;
+    margin: unset;
+  }
+
+  .header__title {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header__description {
+    margin: unset;
+  }
+
+  .section__content {
+    gap: 10px;
+  }
+
+  .section__content-columns .section__content-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section__content-columns h3 {
+    margin-block-end: 10px;
+  }
+
+
+
+  
 }
 
 
