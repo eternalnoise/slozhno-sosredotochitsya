@@ -94,7 +94,7 @@
   text-transform: lowercase;
   background: none;
   appearance: none;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .header__theme-menu-button:hover {
