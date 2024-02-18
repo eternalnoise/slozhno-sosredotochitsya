@@ -104,6 +104,10 @@
 
 .header__theme-menu-button:focus {
   outline: 1px solid var(--accent-text-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent--text-color);
   pointer-events: none;
 }
 
