@@ -103,11 +103,15 @@
 }
 
 .header__theme-menu-button:focus {
-  outline: 1px solid var(--accent-text-color);
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-text-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent--text-color);
+  border: 1px solid var(--accent-text-color);
   pointer-events: none;
 }
 
@@ -183,11 +187,11 @@
 }
 
 .section__content-list-link:focus {
-  outline: 1px solid var(--accent-text-color);
+  outline: none;
 }
 
-.header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent--text-color);
+.section__content-list-link:focus-visible {
+  outline: 1px solid var(--main-text-color);
 }
 
 .image__section {
