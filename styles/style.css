@@ -182,6 +182,10 @@
   outline: 1px solid var(--main-text-color);
 }
 
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent--text-color);
+}
+
 .image__section {
   display: grid;
   gap: 10px;
