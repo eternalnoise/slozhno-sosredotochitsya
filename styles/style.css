@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-size: 18px;
@@ -29,12 +28,6 @@
   margin-block-end: 40px;
   min-block-size: 100vh;
   padding-block: var(--page-padding);
-}
-
-.decorated-zone {
-  
-  
-
 }
 
 .decorated-zone::before {
@@ -92,11 +85,6 @@
   gap: 10px;
   margin-inline-end: 10px;
   list-style: none;
-
-}
-
-.header__theme-menu-item {
-
 }
 
 .header__theme-menu-button {
@@ -134,8 +122,13 @@
   font-size: 18px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .section__content {
-  margin-block-end: 40px;
   display: grid;
   gap: 20px;
 }
@@ -147,30 +140,27 @@
 
 .section__content-list {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
- 
+  display: grid;
+  gap: 20px;
 }
 
 .section__content-list-item {
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .title-decor {
   font-weight: 700;
   color: var(--bg-text-color);
   background-color: var(--accent-color);
+  font-size: inherit;
 }
+
 .section__content-list-item-title {
   color: var(--bg-text-color);
   font-weight: 400;
   background-color: var(--accent-color);
-}
-
-.section__content-list-item-text {
-  margin-block-end: 10px;
-
 }
 
 .section__content-list-link {
@@ -191,14 +181,11 @@
 .image__section {
   display: grid;
   gap: 10px;
-  
-  
 }
 
 .image__content-list {
   display: grid;
   gap: 10px;
-  
 }
 
 .gallery__image {
@@ -207,7 +194,6 @@
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
-
 }
 
 .footer {
@@ -215,7 +201,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-block-size: 667px;
+  min-block-size: 668px;
+  min-height: 100vh;
+  margin-block-start: 40px;
 }
 
 @media (width >= 768px) {
@@ -270,6 +258,11 @@
 
   .section__content-columns > .section__content-title {
     max-inline-size: 30%;
+  }
+
+  .section__content-advice-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
 }
