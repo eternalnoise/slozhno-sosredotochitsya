@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 10px;
   list-style: none;
 }
 
@@ -167,11 +167,6 @@
   font-weight: 700;
   font-size: inherit;
   background-color: var(--accent-color);
-}
-
-.section__content-list-article {
-  display: grid;
-  gap: 20px;
 }
 
 .section__content-list-item-title {
@@ -346,7 +341,7 @@
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 25px;
+    gap: 9px;
     margin: unset;
   }
 
@@ -370,10 +365,6 @@
   .section__content-columns-title {
     margin-block-end: 10px;
   }
-
-
-
-  
 }
 
 
